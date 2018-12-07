@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "eb3995d7-88ef-4420-85c9-bb1701680988"
+        },
+        "resourceGroupName": {
+            "value": "geaddz"
+        },
+        "apiVersion": {
+            "value": "2017-06-01"
+        },
+        "domainName": {
+            "value": "ads.soothsayeranalytics.com"
+        },
+        "nsgName": {
+            "value": "AADDS-ads.soothsayeranalytics.com-NSG"
+        },
+        "vnetName": {
+            "value": "geaddz_vpn"
+        },
+        "subnetName": {
+            "value": "geaddz_ads"
+        },
+        "subnetId": {
+            "value": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/geaddz_ads"
+        },
+        "location": {
+            "value": "westeurope"
+        }
+    }
+}

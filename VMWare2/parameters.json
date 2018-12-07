@@ -6,22 +6,22 @@
             "value": "westeurope"
         },
         "virtualMachineName": {
-            "value": "geaiotedgetest"
+            "value": "geaddzdomain"
         },
         "virtualMachineSize": {
             "value": "Standard_D2s_v3"
         },
         "adminUsername": {
-            "value": "geaddztec"
+            "value": "geadomainadmin"
         },
         "virtualNetworkName": {
             "value": "geaddz_vpn"
         },
         "networkInterfaceName": {
-            "value": "geaiotedgetest630"
+            "value": "geaddzdomain675"
         },
         "networkSecurityGroupName": {
-            "value": "geaddz_nsg"
+            "value": "geaddzdomain-nsg"
         },
         "adminPassword": {
             "value": null
@@ -33,10 +33,10 @@
             "value": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Storage/storageAccounts/geaddzdiag764"
         },
         "subnetName": {
-            "value": "geaddz_subnet"
+            "value": "domainservices_subnet"
         },
         "publicIpAddressName": {
-            "value": "geaiotedgetestip530"
+            "value": "geaddzdomain-ip"
         },
         "publicIpAddressType": {
             "value": "Static"

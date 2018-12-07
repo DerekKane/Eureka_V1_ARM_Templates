@@ -6,22 +6,22 @@
             "value": "westeurope"
         },
         "virtualMachineName": {
-            "value": "geaiotedgetest"
+            "value": "geaddzSQL"
         },
         "virtualMachineSize": {
-            "value": "Standard_D2s_v3"
+            "value": "Standard_DS12_v2"
         },
         "adminUsername": {
-            "value": "geaddztec"
+            "value": "geaddztecsql"
         },
         "virtualNetworkName": {
             "value": "geaddz_vpn"
         },
         "networkInterfaceName": {
-            "value": "geaiotedgetest630"
+            "value": "geaddzsql889"
         },
         "networkSecurityGroupName": {
-            "value": "geaddz_nsg"
+            "value": "geaddzSQL-nsg"
         },
         "adminPassword": {
             "value": null
@@ -36,13 +36,43 @@
             "value": "geaddz_subnet"
         },
         "publicIpAddressName": {
-            "value": "geaiotedgetestip530"
+            "value": "geaddzSQL-ip"
         },
         "publicIpAddressType": {
             "value": "Static"
         },
         "publicIpAddressSku": {
             "value": "Basic"
+        },
+        "sqlConnectivityType": {
+            "value": "Public"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlStorageDisksCount": {
+            "value": 1
+        },
+        "sqlStorageWorkloadType": {
+            "value": "GENERAL"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": 2
+        },
+        "sqlStorageDeploymentToken": {
+            "value": 87801
+        },
+        "sqlAuthenticationLogin": {
+            "value": "geaddztecsql"
+        },
+        "sqlAuthenticationPassword": {
+            "value": null
+        },
+        "rServicesEnabled": {
+            "value": "false"
         }
     }
 }

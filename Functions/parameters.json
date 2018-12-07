@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "geaddzfunctionapp"
+        },
+        "storageName": {
+            "value": "geaddzfunctiona92cd"
+        },
+        "location": {
+            "value": "West Europe"
+        },
+        "subscriptionId": {
+            "value": "eb3995d7-88ef-4420-85c9-bb1701680988"
+        }
+    }
+}

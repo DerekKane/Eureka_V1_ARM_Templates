@@ -1,8 +1,33 @@
 Deploy Order
 
+
+VirtualNetwork
+NetWorkSecurityGroups
+VMWare1 - (IoTEdge Test Machine )
+VMWare2 - (Active Directory Logic)
+VMWare3 - (SQLServer)
+
+Functions
 KeyVault
+
+SQLDatabase
+SQLServer
+
+DataLake
+
+DomainServices
+HDInsight
+
 IoTHub
+BlobStoragetoIoT
+
+EventHubs
+
+DataBricks
+
 DataCatalog
 Cosmos
-BlobStoragetoIoT
 DataFactory
+IoTContainerRegistry
+
+VMWare4 - (PowerBI)
