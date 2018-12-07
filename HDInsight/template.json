@@ -1,0 +1,198 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+    "contentVersion": "0.9.0.0",
+    "parameters": {
+        "clusterName": {
+            "type": "String",
+            "metadata": {
+                "description": "The name of the HDInsight cluster to create."
+            }
+        },
+        "clusterLoginUserName": {
+            "defaultValue": "admin",
+            "type": "String",
+            "metadata": {
+                "description": "These credentials can be used to submit jobs to the cluster and to log into cluster dashboards."
+            }
+        },
+        "clusterLoginPassword": {
+            "type": "SecureString",
+            "metadata": {
+                "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
+            }
+        },
+        "location": {
+            "defaultValue": "westeurope",
+            "type": "String",
+            "metadata": {
+                "description": "The location where all azure resources will be deployed."
+            }
+        },
+        "clusterVersion": {
+            "defaultValue": "3.6",
+            "type": "String",
+            "metadata": {
+                "description": "HDInsight cluster version."
+            }
+        },
+        "clusterWorkerNodeCount": {
+            "defaultValue": 1,
+            "type": "Int",
+            "metadata": {
+                "description": "The number of nodes in the HDInsight cluster."
+            }
+        },
+        "clusterKind": {
+            "defaultValue": "SPARK",
+            "type": "String",
+            "metadata": {
+                "description": "The type of the HDInsight cluster to create."
+            }
+        },
+        "sshUserName": {
+            "defaultValue": "sshuser",
+            "type": "String",
+            "metadata": {
+                "description": "These credentials can be used to remotely access the cluster."
+            }
+        },
+        "sshPassword": {
+            "type": "SecureString",
+            "metadata": {
+                "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
+            }
+        },
+        "hiveUserName": {
+            "type": "String",
+            "metadata": {
+                "description": "These credentials can be used to remotely access hive."
+            }
+        },
+        "hivePassword": {
+            "type": "SecureString"
+        },
+        "identityCertificate": {
+            "type": "SecureString"
+        },
+        "identityCertificatePassword": {
+            "type": "SecureString"
+        },
+        "domainUsername": {
+            "type": "String"
+        },
+        "domainUserPassword": {
+            "type": "SecureString"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.HDInsight/clusters",
+            "name": "[parameters('clusterName')]",
+            "apiVersion": "2015-03-01-preview",
+            "location": "[parameters('location')]",
+            "properties": {
+                "clusterVersion": "[parameters('clusterVersion')]",
+                "osType": "Linux",
+                "tier": "premium",
+                "clusterDefinition": {
+                    "kind": "[parameters('clusterKind')]",
+                    "componentVersion": {
+                        "Spark": "2.2"
+                    },
+                    "configurations": {
+                        "gateway": {
+                            "restAuthCredential.isEnabled": true,
+                            "restAuthCredential.username": "[parameters('clusterLoginUserName')]",
+                            "restAuthCredential.password": "[parameters('clusterLoginPassword')]"
+                        },
+                        "core-site": {
+                            "fs.defaultFS": "adl://home",
+                            "dfs.adls.home.hostname": "geadatalake.azuredatalakestore.net",
+                            "dfs.adls.home.mountpoint": "/Staging_Location/Sparkcluster"
+                        },
+                        "hive-site": {
+                            "javax.jdo.option.ConnectionDriverName": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+                            "javax.jdo.option.ConnectionURL": "jdbc:sqlserver://geaddztestsql.database.windows.net;database=geasqltest;encrypt=true;trustServerCertificate=true;create=false;loginTimeout=300",
+                            "javax.jdo.option.ConnectionUserName": "[parameters('hiveUserName')]",
+                            "javax.jdo.option.ConnectionPassword": "[parameters('hivePassword')]"
+                        },
+                        "hive-env": {
+                            "hive_database": "Existing MSSQL Server database with SQL authentication",
+                            "hive_database_name": "geasqltest",
+                            "hive_database_type": "mssql",
+                            "hive_existing_mssql_server_database": "geasqltest",
+                            "hive_existing_mssql_server_host": "geaddztestsql.database.windows.net",
+                            "hive_hostname": "geaddztestsql.database.windows.net"
+                        },
+                        "clusterIdentity": {
+                            "clusterIdentity.applicationId": "34576b2e-c097-4116-afc8-1572d5bfad96",
+                            "clusterIdentity.certificate": "[parameters('identityCertificate')]",
+                            "clusterIdentity.aadTenantId": "https://login.windows.net/5e3869d3-2dc1-470b-b5a7-6d44d4be01e5",
+                            "clusterIdentity.resourceUri": "https://datalake.azure.net/",
+                            "clusterIdentity.certificatePassword": "[parameters('identityCertificatePassword')]"
+                        }
+                    }
+                },
+                "storageProfile": {
+                    "storageaccounts": []
+                },
+                "computeProfile": {
+                    "roles": [
+                        {
+                            "name": "headnode",
+                            "minInstanceCount": 1,
+                            "targetInstanceCount": 2,
+                            "hardwareProfile": {
+                                "vmSize": "Standard_D3_V2"
+                            },
+                            "osProfile": {
+                                "linuxOperatingSystemProfile": {
+                                    "username": "[parameters('sshUserName')]",
+                                    "password": "[parameters('sshPassword')]"
+                                }
+                            },
+                            "virtualNetworkProfile": {
+                                "id": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn",
+                                "subnet": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/sparkcluster_subnet"
+                            },
+                            "scriptActions": []
+                        },
+                        {
+                            "name": "workernode",
+                            "minInstanceCount": 1,
+                            "targetInstanceCount": 1,
+                            "hardwareProfile": {
+                                "vmSize": "Standard_D3_V2"
+                            },
+                            "osProfile": {
+                                "linuxOperatingSystemProfile": {
+                                    "username": "[parameters('sshUserName')]",
+                                    "password": "[parameters('sshPassword')]"
+                                }
+                            },
+                            "virtualNetworkProfile": {
+                                "id": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn",
+                                "subnet": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/sparkcluster_subnet"
+                            },
+                            "scriptActions": []
+                        }
+                    ]
+                },
+                "securityProfile": {
+                    "directoryType": "ActiveDirectory",
+                    "domain": "ads.soothsayeranalytics.com",
+                    "organizationalUnitDN": "OU=HiveUsers,DC=ads,DC=soothsayeranalytics,DC=com",
+                    "ldapsUrls": [
+                        "ldaps://ads.soothsayeranalytics.com:636"
+                    ],
+                    "domainUsername": "[parameters('domainUsername')]",
+                    "domainUserPassword": "[parameters('domainUserPassword')]",
+                    "clusterUsersGroupDNs": [
+                        "HiveUsers"
+                    ]
+                }
+            },
+            "dependsOn": []
+        }
+    ]
+}
