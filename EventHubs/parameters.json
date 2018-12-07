@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "geaddzeventhub"
+        },
+        "location": {
+            "value": "westeurope"
+        },
+        "skuName": {
+            "value": "Standard"
+        },
+        "skuTier": {
+            "value": "Standard"
+        },
+        "skuCapacity": {
+            "value": "1"
+        },
+        "isAutoInflateEnabled": {
+            "value": "true"
+        },
+        "maximumThroughputUnits": {
+            "value": "3"
+        },
+        "kafkaEnabled": {
+            "value": true
+        },
+        "zoneRedundant": {
+            "value": false
+        }
+    }
+}
