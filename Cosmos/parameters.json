@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "geanosql"
+            "value": "geanosqleureka"
         },
         "location": {
             "value": "westeurope"
