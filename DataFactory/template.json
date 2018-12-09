@@ -3,11 +3,9 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "defaultValue": "myv2datafactory",
             "type": "String"
         },
         "location": {
-            "defaultValue": "East US",
             "type": "String"
         },
         "apiVersion": {

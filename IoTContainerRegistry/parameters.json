@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "registryName": {
-            "value": "GEAProdCR"
+            "value": "EurekaProdCR"
         },
         "registryLocation": {
             "value": "westeurope"

@@ -53,10 +53,7 @@
                     "ipRules": [],
                     "virtualNetworkRules": [
                         {
-                            "id": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/geaddz_subnet"
-                        },
-                        {
-                            "id": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/sparkcluster_subnet"
+                            "id": "/subscriptions/2cb2dd50-63c7-4174-bfe1-a5eaa937df8a/resourceGroups/Eureka/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/geaddz_subnet"
                         }
                     ]
                 }
