@@ -11,6 +11,12 @@
         "accountType": {
             "value": "Standard_RAGRS"
         },
+        "virtualNetworkName": {
+            "type": "String"
+        },
+        "subnetName": {
+            "type": "String"
+        },		
         "kind": {
             "value": "Storage"
         },

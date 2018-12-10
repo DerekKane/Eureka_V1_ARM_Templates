@@ -5,6 +5,12 @@
         "name": {
             "type": "String"
         },
+        "virtualNetworkName": {
+            "type": "String"
+        },	
+        "subnetName": {
+            "type": "String"
+        },		
         "location": {
             "type": "String"
         },
@@ -23,6 +29,10 @@
         "networkAclsDefaultAction": {
             "type": "String"
         }
+    },
+	"variables": {
+        "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
+        "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]"
     },
     "resources": [
         {
@@ -53,7 +63,7 @@
                     "ipRules": [],
                     "virtualNetworkRules": [
                         {
-                            "id": "/subscriptions/2cb2dd50-63c7-4174-bfe1-a5eaa937df8a/resourceGroups/Eureka/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/geaddz_subnet"
+                            "id": "[variables('subnetRef')]"
                         }
                     ]
                 }
