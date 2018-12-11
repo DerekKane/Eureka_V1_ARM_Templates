@@ -26,6 +26,12 @@
         "adminPassword": {
             "value": null
         },
+        "diagnosticsStorageAccountName": {
+            "value": "geaddzdiag764"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/2cb2dd50-63c7-4174-bfe1-a5eaa937df8a/resourceGroups/Eureka/providers/Microsoft.Storage/storageAccounts/geaddzdiag764"
+        },
         "subnetName": {
             "value": "geaddz_subnet"
         },

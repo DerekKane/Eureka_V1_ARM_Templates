@@ -32,6 +32,9 @@
         "publicIpAddressName": {
             "type": "String"
         },
+        "diagnosticsStorageAccountName": {
+            "value": "geaddzdiag764"
+        },
         "publicIpAddressType": {
             "type": "String"
         },
