@@ -26,9 +26,6 @@
         "adminPassword": {
             "value": null
         },
-        "diagnosticsStorageAccountName": {
-            "value": "geaddzdiag764"
-        },
         "subnetName": {
             "value": "geaddz_subnet"
         },
