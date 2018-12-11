@@ -29,9 +29,6 @@
         "diagnosticsStorageAccountName": {
             "type": "String"
         },
-        "diagnosticsStorageAccountId": {
-            "type": "String"
-        },
         "subnetName": {
             "type": "String"
         },
