@@ -26,9 +26,6 @@
         "adminPassword": {
             "type": "SecureString"
         },
-        "diagnosticsStorageAccountName": {
-            "type": "String"
-        },
         "subnetName": {
             "type": "String"
         },
