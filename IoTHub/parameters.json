@@ -19,6 +19,9 @@
         },
         "features": {
             "value": "None"
+        },
+        "connectionString": {
+            "value": "DefaultEndpointsProtocol=https;AccountName=eurekahubtoblob;AccountKey=yNvpLWPK5ExIPouu3z4zfne3EQtdrmp0XdncrFfHqHC9gkXgOy7b6NQCkVvzWUYIPVXnlcPeUIaPOKsLNAgviw==;EndpointSuffix=core.windows.net"
         }
     }
 }

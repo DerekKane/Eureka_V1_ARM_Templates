@@ -19,6 +19,9 @@
         },
         "features": {
             "type": "String"
+        },
+        "connectionString": {
+            "type": "String"
         }
     },
     "resources": [
@@ -32,13 +35,13 @@
             "apiVersion": "2018-04-01",
             "location": "[parameters('location')]",
             "properties": {
-                "eventHubEndpoints": {
-                    "events": {
-                        "retentionTimeInDays": 1,
-                        "partitionCount": "[parameters('d2c_partitions')]"
+                "storageEndpoints": {
+                    "$default": {
+                        "sasTtlAsIso8601": "PT1H",
+                        "connectionString":"[parameters('connectionString')]",
+                        "containerName": "eurekacontainerblob"
                     }
-                },
-                "features": "[parameters('features')]"
+                }
             }
         }
     ]
