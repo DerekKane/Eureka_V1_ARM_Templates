@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "geaddzhubtoblob"
+            "value": "eurekahubtoblob"
         },
         "location": {
             "value": "westeurope"
@@ -11,6 +11,12 @@
         "accountType": {
             "value": "Standard_RAGRS"
         },
+        "virtualNetworkName": {
+            "type": "String"
+        },
+        "subnetName": {
+            "type": "String"
+        },		
         "kind": {
             "value": "Storage"
         },
