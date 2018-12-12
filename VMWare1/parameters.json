@@ -6,37 +6,37 @@
             "value": "westeurope"
         },
         "virtualMachineName": {
-            "value": "geaiotedgetest"
+            "value": "SV000001"
         },
         "virtualMachineSize": {
             "value": "Standard_D2s_v3"
         },
         "adminUsername": {
-            "value": "geaddztec"
+            "value": "eurekaadmin"
         },
         "virtualNetworkName": {
-            "value": "geaddz_vpn"
+            "value": "VN-EMEA-Eureka"
         },
         "networkInterfaceName": {
-            "value": "geaiotedgetest630"
+            "value": "NI-EMEA-Eureka-SV000001"
         },
         "networkSecurityGroupName": {
-            "value": "geaddz_nsg"
+            "value": "NG-EMEA-Eureka-VirtualMachines-01"
         },
         "adminPassword": {
             "value": null
         },
         "diagnosticsStorageAccountName": {
-            "value": "geaddzdiag764"
+            "value": "sageaagemea000001"
         },
         "diagnosticsStorageAccountId": {
-            "value": "/subscriptions/2cb2dd50-63c7-4174-bfe1-a5eaa937df8a/resourceGroups/Eureka/providers/Microsoft.Storage/storageAccounts/geaddzdiag764"
+            "value": "/subscriptions/3bbe4bcb-a377-47e4-941b-865e84a40ed9/resourceGroups/RG-EMEA-Eureka/providers/Microsoft.Storage/storageAccounts/sageaagemea000001"
         },
         "subnetName": {
-            "value": "geaddz_subnet"
+            "value": "SN-EMEA-Eureka-VirtualMachines-01"
         },
         "publicIpAddressName": {
-            "value": "geaiotedgetestip530"
+            "value": "PI-EMEA-002018-01"
         },
         "publicIpAddressType": {
             "value": "Static"

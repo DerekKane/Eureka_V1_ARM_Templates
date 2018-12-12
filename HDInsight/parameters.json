@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "clusterName": {
-            "value": "geaddzhadoop"
+            "value": "eurekahdinsight"
         },
         "clusterLoginUserName": {
             "value": "admin"
@@ -30,7 +30,7 @@
             "value": null
         },
         "hiveUserName": {
-            "value": "ServerAdmin"
+            "value": "eurekaadmin"
         },
         "hivePassword": {
             "value": null
@@ -42,7 +42,7 @@
             "value": null
         },
         "domainUsername": {
-            "value": "geaddz@ads.soothsayeranalytics.com"
+            "value": "derek.kane@geacloud.onmicrosoft.com"
         },
         "domainUserPassword": {
             "value": null

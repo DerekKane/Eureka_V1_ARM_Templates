@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "administratorLogin": {
-            "value": "geadbadmin"
+            "value": "eurekaadmin"
         },
         "administratorLoginPassword": {
             "value": null
@@ -12,7 +12,7 @@
             "value": "SQL_Latin1_General_CP1_CI_AS"
         },
         "databaseName": {
-            "value": "geaDB"
+            "value": "EurekaDB"
         },
         "tier": {
             "value": "Standard"
@@ -27,7 +27,7 @@
             "value": 268435456000
         },
         "serverName": {
-            "value": "geaddzsql"
+            "value": "geaeurekasql"
         },
         "sampleName": {
             "value": ""

@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "Eurekaiothub"
+            "value": "EurekaiothubS1"
         },
         "location": {
             "value": "westeurope"
@@ -21,7 +21,7 @@
             "value": "None"
         },
         "connectionString": {
-            "value": "DefaultEndpointsProtocol=https;AccountName=eurekahubtoblob;AccountKey=yNvpLWPK5ExIPouu3z4zfne3EQtdrmp0XdncrFfHqHC9gkXgOy7b6NQCkVvzWUYIPVXnlcPeUIaPOKsLNAgviw==;EndpointSuffix=core.windows.net"
+            "value": "DefaultEndpointsProtocol=https;AccountName=eurekaiothubtoblob;AccountKey=+oV3AQkKv3ORD5DjoGS1kJ9f83vUcLmrQXbVoiVI1XU0GE87aBjkoTZS6/5wjcR7mQ9rodDblG95xKdcyZVIqQ==;EndpointSuffix=core.windows.net"
         }
     }
 }

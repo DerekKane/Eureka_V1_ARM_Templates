@@ -1,25 +1,29 @@
 Deploy Order
-
-
 *******************************************************
 * Basic Shell
 *******************************************************
 
+
+KeyVault
+
 VirtualNetwork
 NetWorkSecurityGroups
 
-VMWare1 - (IoTEdge Test Machine )
-VMWare2 - (Active Directory Logic)
+Network Interface-VMWare1
+VMWare1 - (IoTEdge Test Machine)
+VMWare2 - (*OptiPartner Test Machine)
+
 VMWare3 - (SQLServer)
 
+
+VMWare4 - (PowerBI)
+
 Functions
-KeyVault
 
-SQLDatabase
-SQLServer
+SQLServer 
 
-IoTHub
 BlobStoragetoIoT
+IoTHub
 
 EventHubs
 
@@ -36,7 +40,6 @@ IoTContainerRegistry
 
 DataBricks
 
-VMWare4 - (PowerBI)
 
 *******************************************************
 * Advanced Configs

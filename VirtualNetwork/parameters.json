@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "geaddz_vpn"
+            "value": "VN-EMEA-Eureka"
         },
         "location": {
             "value": "westeurope"
@@ -12,7 +12,7 @@
             "value": "10.0.0.0/16"
         },
         "subnetName": {
-            "value": "geaddz_subnet"
+            "value": "SN-EMEA-Eureka-VirtualMachines-01"
         },
         "subnetAddressPrefix": {
             "value": "10.0.0.0/24"

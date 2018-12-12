@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "geaddzfunctionapp"
+            "value": "EurekaFunctionApp"
         },
         "storageName": {
-            "value": "geaddzfunctiona92cd"
+            "value": "sageaag000002"
         },
         "location": {
             "value": "West Europe"
         },
         "subscriptionId": {
-            "value": "2cb2dd50-63c7-4174-bfe1-a5eaa937df8a"
+            "value": "3bbe4bcb-a377-47e4-941b-865e84a40ed9"
         }
     }
 }

@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "EurekaDataCatalog"
+            "value": "GEADataCatalogService"
         },
         "location": {
             "value": "westeurope"
@@ -11,8 +11,8 @@
         "admins": {
             "value": [
                 {
-                    "upn": "geaddz@soothsayeranalytics.com",
-                    "objectId": "6e842868-92f0-4150-bbcb-b2acdd6487b5"
+                    "upn": "derek.kane@geacloud.onmicrosoft.com",
+                    "objectId": "dc36f729-d0c4-4e58-8736-720ce8906cf4"
                 }
             ]
         },
@@ -25,8 +25,8 @@
         "users": {
             "value": [
                 {
-                    "upn": "geaddz@soothsayeranalytics.com",
-                    "objectId": "6e842868-92f0-4150-bbcb-b2acdd6487b5"
+                    "upn": "derek.kane@geacloud.onmicrosoft.com",
+                    "objectId": "dc36f729-d0c4-4e58-8736-720ce8906cf4"
                 }
             ]
         }

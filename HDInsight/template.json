@@ -107,27 +107,27 @@
                         },
                         "core-site": {
                             "fs.defaultFS": "adl://home",
-                            "dfs.adls.home.hostname": "geadatalake.azuredatalakestore.net",
+                            "dfs.adls.home.hostname": "geadatalakestore.azuredatalakestore.net",
                             "dfs.adls.home.mountpoint": "/Staging_Location/Sparkcluster"
                         },
                         "hive-site": {
                             "javax.jdo.option.ConnectionDriverName": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
-                            "javax.jdo.option.ConnectionURL": "jdbc:sqlserver://geaddztestsql.database.windows.net;database=geasqltest;encrypt=true;trustServerCertificate=true;create=false;loginTimeout=300",
+                            "javax.jdo.option.ConnectionURL": "jdbc:sqlserver://geaeurekasql.database.windows.net:1433;database=EurekaDB;user=eurekaadmin@geaeurekasql;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;",
                             "javax.jdo.option.ConnectionUserName": "[parameters('hiveUserName')]",
                             "javax.jdo.option.ConnectionPassword": "[parameters('hivePassword')]"
                         },
                         "hive-env": {
                             "hive_database": "Existing MSSQL Server database with SQL authentication",
-                            "hive_database_name": "geasqltest",
+                            "hive_database_name": "EurekaDB",
                             "hive_database_type": "mssql",
-                            "hive_existing_mssql_server_database": "geasqltest",
-                            "hive_existing_mssql_server_host": "geaddztestsql.database.windows.net",
-                            "hive_hostname": "geaddztestsql.database.windows.net"
+                            "hive_existing_mssql_server_database": "EurekaDB",
+                            "hive_existing_mssql_server_host": "geaeurekasql.database.windows.net",
+                            "hive_hostname": "geaeurekasql.database.windows.net"
                         },
                         "clusterIdentity": {
-                            "clusterIdentity.applicationId": "34576b2e-c097-4116-afc8-1572d5bfad96",
+                            "clusterIdentity.applicationId": "ae3838c3-d36f-41ff-9084-16b4177e9181",
                             "clusterIdentity.certificate": "[parameters('identityCertificate')]",
-                            "clusterIdentity.aadTenantId": "https://login.windows.net/5e3869d3-2dc1-470b-b5a7-6d44d4be01e5",
+                            "clusterIdentity.aadTenantId": "https://login.windows.net/0e17f90f-88a3-4f93-a5d7-cc847cff307e",
                             "clusterIdentity.resourceUri": "https://datalake.azure.net/",
                             "clusterIdentity.certificatePassword": "[parameters('identityCertificatePassword')]"
                         }
@@ -152,8 +152,8 @@
                                 }
                             },
                             "virtualNetworkProfile": {
-                                "id": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn",
-                                "subnet": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/sparkcluster_subnet"
+                                "id": "/subscriptions/3bbe4bcb-a377-47e4-941b-865e84a40ed9/resourceGroups/RG-EMEA-Eureka/providers/Microsoft.Network/virtualNetworks/VN-EMEA-OptipartnerSandbox",
+                                "subnet": "/subscriptions/3bbe4bcb-a377-47e4-941b-865e84a40ed9/resourceGroups/RG-EMEA-Eureka/providers/Microsoft.Network/virtualNetworks/VN-EMEA-OptipartnerSandbox/subnets/SN-EMEA-OptipartnerSandbbox-01"
                             },
                             "scriptActions": []
                         },
@@ -171,8 +171,8 @@
                                 }
                             },
                             "virtualNetworkProfile": {
-                                "id": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn",
-                                "subnet": "/subscriptions/eb3995d7-88ef-4420-85c9-bb1701680988/resourceGroups/geaddz/providers/Microsoft.Network/virtualNetworks/geaddz_vpn/subnets/sparkcluster_subnet"
+                                "id": "/subscriptions/3bbe4bcb-a377-47e4-941b-865e84a40ed9/resourceGroups/RG-EMEA-Eureka/providers/Microsoft.Network/virtualNetworks/VN-EMEA-OptipartnerSandbox",
+                                "subnet": "/subscriptions/3bbe4bcb-a377-47e4-941b-865e84a40ed9/resourceGroups/RG-EMEA-Eureka/providers/Microsoft.Network/virtualNetworks/VN-EMEA-OptipartnerSandbox/subnets/SN-EMEA-OptipartnerSandbbox-01"
                             },
                             "scriptActions": []
                         }
@@ -180,10 +180,10 @@
                 },
                 "securityProfile": {
                     "directoryType": "ActiveDirectory",
-                    "domain": "ads.soothsayeranalytics.com",
-                    "organizationalUnitDN": "OU=HiveUsers,DC=ads,DC=soothsayeranalytics,DC=com",
+                    "domain": "geacloud.onmicrosoft.com",
+                    "organizationalUnitDN": "CN=Users,DC=geacloud,DC=onmicrosoft,DC=com",
                     "ldapsUrls": [
-                        "ldaps://ads.soothsayeranalytics.com:636"
+                        "ldaps://geacloud.onmicrosoft.com:636"
                     ],
                     "domainUsername": "[parameters('domainUsername')]",
                     "domainUserPassword": "[parameters('domainUserPassword')]",

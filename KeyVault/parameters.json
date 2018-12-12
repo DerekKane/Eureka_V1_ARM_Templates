@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "Eurekakeyvault"
+            "value": "EurekaKV"
         },
         "location": {
             "value": "westeurope"
@@ -15,7 +15,7 @@
             "value": [
                 {
                     "objectId": "6e842868-92f0-4150-bbcb-b2acdd6487b5",
-                    "tenantId": "5e3869d3-2dc1-470b-b5a7-6d44d4be01e5",
+                    "tenantId": "0e17f90f-88a3-4f93-a5d7-cc847cff307e",
                     "permissions": {
                         "keys": [
                             "Get",
@@ -59,13 +59,13 @@
             ]
         },
         "tenant": {
-            "value": "5e3869d3-2dc1-470b-b5a7-6d44d4be01e5"
+            "value": "0e17f90f-88a3-4f93-a5d7-cc847cff307e"
         },
         "enabledForDeployment": {
             "value": false
         },
         "enabledForTemplateDeployment": {
-            "value": false
+            "value": true
         },
         "enabledForDiskEncryption": {
             "value": false
